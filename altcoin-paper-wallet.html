@@ -1,141 +1,175 @@
-<html>
-<script type="text/javascript" src="qrcode.js"></script>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-<style>
-body{font-family: monospace, serif}
-span.key{font-family: monospace, serif}
-h1, h2, h3, h4, h5, h6{
-  margin-top:10px;
-  margin-bottom:5px;
-}
-div.desc{
-    width:25%;
-    float:left;
-    word-wrap:break-word;
-}
-div.qr{
-    float:left;
-    padding:0px 20px 0px 10px;
-}
-div.spacer{
-    clear:both;
-    padding:20px 0px 0px 0px;
-}
-</style>
-    <title>Coins</title><head>
+  <meta charset="UTF-8">
+  <title>Coins</title>
+  <style>
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 0px;
+      margin-bottom: 0px;
+    }
+    body {
+      font-family: monospace, serif
+    }
+    div.description {
+      width: 26%;
+      float: left;
+      word-wrap: break-word;
+    }
+    span.qrText {
+      color: LightGrey;
+    }
+    div.qrImage {
+      float: left;
+      padding: 0px 20px 0px 10px;
+    }
+    div.spacer {
+      clear: both;
+      padding: 10px 0px 0px 0px;
+    }
+  </style>
+</head>
+
 <body>
+  <h3 contenteditable="true">BTC</h3>
+  <div class="description">
+    <span contenteditable=true>Public Address:</span>
+    <br><br>
+    <span class="qrText" contenteditable=true spellcheck=false>1NYA5rWpxF1hNwi2qNH2JoLozC9zXebRYJ</span>
+  </div>
+  <div class="qrImage"></div>
+  <div class="description">
+    <span contenteditable=true>Private Key:</span>
+    <br><br>
+    <span class="qrText" contenteditable=true spellcheck=false>5KFfQ5VxzQLCk5jUXE3P4VunvCVbdm9h5jT7UvUvDEaXsipUcRC</span>
+  </div>
+  <div class="qrImage"></div>
+  <div class="spacer"></div>
 
-<h3>BTC</h3>
-<div class="desc">
-    Address (Public):
-    <br><br><span id="btc_pub" class="key">1NYA5rWpxF1hNwi2qNH2JoLozC9zXebRYJ</span>
-</div><div id="btc_pub_qr" class="qr"></div>
-<div class="desc">
-    Key (Private):
-    <br><br><span id="btc_pri" class="key">5KFfQ5VxzQLCk5jUXE3P4VunvCVbdm9h5jT7UvUvDEaXsipUcRC</span>
-        <br><br>(Wallet Import Format)
-</div><div id="btc_pri_qr" class="qr"></div>
-<div class="spacer">
+  <h3 contenteditable="true">ETH</h3>
+  <div class="description">
+    <span contenteditable=true>Public Address:</span>
+    <br><br>
+    <span class="qrText" contenteditable=true spellcheck=false>0x5cc2189616cc87cdcbd51eccb58ad9e056b565d2</span>
+  </div>
+  <div class="qrImage"></div>
+  <div class="description">
+    <span contenteditable=true>Private Key:</span>
+    <br>
+    <span class="qrText" contenteditable=true spellcheck=false>fdbce774d353ed317026f90c468a34cf3adc60482bf78b9a0ee2f172891d6e45</span>
+  </div>
+  <div class="qrImage"></div>
+  <div class="spacer"></div>
 
-<h3>ETH</h3>
-<div class="desc">
-    Address (Public):
-    <br><br><span id="eth_pub" class="key">0x5cc2189616cc87cdcbd51eccb58ad9e056b565d2</span>
-</div><div id="eth_pub_qr" class="qr"></div>
-<div class="desc">
-    Key (Private):
-    <br><br><span id="eth_pri" class="key">fdbce774d353ed317026f90c468a34cf3adc60482bf78b9a0ee2f172891d6e45</span>
-</div><div id="eth_pri_qr" class="qr"></div>
-<div class="spacer">
+  <h3 contenteditable="true">XRP</h3>
+  <div class="description">
+    <span contenteditable=true>Public Address:</span>
+    <br><br>
+    <span class="qrText" contenteditable=true spellcheck=false>rHHLminn5tvGxvu13ApyQnFt8fpwfEHikS</span>
+  </div>
+  <div class="qrImage"></div>
+  <div class="description">
+    <span contenteditable=true>Secret Key:</span>
+    <br><br>
+    <span class="qrText" contenteditable=true spellcheck=false>snS25xqx3dfi83E1iGCpsjHA5EMbw</span>
+  </div>
+  <div class="qrImage"></div>
+  <div class="spacer"></div>
 
-<h3>XRP (Ripple)</h3>
-<div class="desc">
-    Address (Public):
-    <br><br><span id="xrp_pub" class="key">rHHLminn5tvGxvu13ApyQnFt8fpwfEHikS</span>
-</div><div id="xrp_pub_qr" class="qr"></div>
-<div class="desc">
-    Key (Private):
-    <br><br><span id="xrp_pri" class="key">snS25xqx3dfi83E1iGCpsjHA5EMbw</span>
-</div><div id="xrp_pri_qr" class="qr"></div>
-<div class="spacer">
+  <h3 contenteditable="true">DASH</h3>
+  <div class="description">
+    <span contenteditable=true>Public Address:</span>
+    <br><br>
+    <span class="qrText" contenteditable=true spellcheck=false>Xh9FJd5BMfbtDgJBp9i6zVzSGa8qVbWEHk</span>
+  </div>
+  <div class="qrImage"></div>
+  <div class="description">
+    <span contenteditable=true>Private Key:</span>
+    <br><br>
+    <span class="qrText" contenteditable=true spellcheck=false>7qqLp4wioK272aRdjPJYmrKNB5i29z9WrNgPKeEfSuYTDwKgrE3</span>
+  </div>
+  <div class="qrImage"></div>
+  <div class="spacer"></div>
 
-<h3>DASH</h3>
-<div class="desc">
-    Address (Public):
-    <br><br><span id="dash_pub" class="key">Xh9FJd5BMfbtDgJBp9i6zVzSGa8qVbWEHk</span>
-</div><div id="dash_pub_qr" class="qr"></div>
-<div class="desc">
-    Key (Private):
-    <br><br><span id="dash_pri" class="key">7qqLp4wioK272aRdjPJYmrKNB5i29z9WrNgPKeEfSuYTDwKgrE3</span>
-    <br><br>(Wallet Import Format)
-</div><div id="dash_pri_qr" class="qr"></div>
-<div class="spacer">
+  <h3 contenteditable="true">LTC</h3>
+  <div class="description">
+    <span contenteditable=true>Public Address:</span>
+    <br><br>
+    <span class="qrText" contenteditable=true spellcheck=false>LKPvaxjTLh5vsquAKdnzryyLCJxzZ4rmAM</span>
+  </div>
+  <div class="qrImage"></div>
+  <div class="description">
+    <span contenteditable=true>Private Key:</span>
+    <br><br>
+    <span class="qrText" contenteditable=true spellcheck=false>6uSCCeKkgjLJfo98PPVqHbLpBYg6ef8n9EcWLEYpmrgsTqfPTC9</span>
+  </div>
+  <div class="qrImage"></div>
+  <div class="spacer"></div>
 
-<h3>LTC</h3>
-<div class="desc">
-    Address (Public):
-    <br><br><span id="ltc_pub" class="key">LKPvaxjTLh5vsquAKdnzryyLCJxzZ4rmAM</span>
-</div><div id="ltc_pub_qr" class="qr"></div>
-<div class="desc">
-    Key (Private):
-    <br><br><span id="ltc_pri" class="key">6uSCCeKkgjLJfo98PPVqHbLpBYg6ef8n9EcWLEYpmrgsTqfPTC9</span>
-    <br><br>(Wallet Import Format)
-</div><div id="ltc_pri_qr" class="qr"></div>
-<div class="spacer">
+  <h3 contenteditable="true">XMR (Monero)</h3>
+  <div class="description">
+    <span contenteditable=true>Public Address:</span>
+    <br><br>
+    <span class="qrText" contenteditable=true spellcheck=false>45b6BtNh8jC4PguGcoXgxHCW3XfoX85F8RaRDqJ1319oCxc1Wge38rYM1n4m6Mjkzahz2F3gMHcHKc4LqKSTybqo4GvtJan</span>
+  </div>
+  <div class="qrImage"></div>
+  <div class="description">
+    <span contenteditable=true>Mnemonic Key:</span>
+    <br><br>
+    <span class="qrText" contenteditable=true spellcheck=false>ionic exotic aztec owner yields superior onion rest industrial hyper foamy smidgen foamy</span>
+  </div>
+  <div class="qrImage"></div>
+  <div class="spacer"></div>
 
-<h3>XMR (Monero)</h3>
-<div class="desc">
-    Account Address (Public):
-    <br><br><span id="xmr_pub" class="key">45b6BtNh8jC4PguGcoXgxHCW3XfoX85F8RaRDqJ1319oCxc1Wge38rYM1n4m6Mjkzahz2F3gMHcHKc4LqKSTybqo4GvtJan</span>
-</div><div id="xmr_pub_qr" class="qr"></div>
-<div class="desc">
-    View Key (Private):
-    <br><br><span id="xmr_view_pri" class="key">c4e1496764fc14e15e59521f42d0829334763d540af28a2e348c48bcfbc30e0e</span>
-</div><div id="xmr_view_pri_qr" class="qr"></div>
-<div class="spacer">
-<div class="desc">
-    Spend Key (Private):
-    <br><br><span id="xmr_spend_pri" class="key">e7b33dce05d6968e8f98802912e14ba33a6d9b2a48bede4cc453a941309f6a01</span>
-</div><div id="xmr_spend_pri_qr" class="qr"></div>
-<div class="desc">
-    Mnemonic Key (Private):
-    <br><br>ionic exotic aztec owner yields superior onion rest industrial hyper foamy smidgen foamy
-</div>
-<div class="spacer">
+  <h3 contenteditable="true">NEM</h3>
+  <div class="description">
+    <span contenteditable=true>Public Address:</span>
+    <br><br>
+    <span class="qrText" contenteditable=true spellcheck=false>NC3QC4MHUK3MA66CGAQE3SGYJI4QVCHJ2EJG4DDV</span>
+  </div>
+  <div class="qrImage"></div>
+  <div class="description">
+    <span contenteditable=true>Private Key:</span>
+    <br><br>
+    <span class="qrText" contenteditable=true spellcheck=false>5b9e52502640ac7385cf95ae2566431ae072e91e2550212d7fcdffd10a173b1b</span>
+  </div>
+  <div class="qrImage"></div>
 
-<h3>NEM</h3>
-<div class="desc">
-    TODO:
-    <br><br><span id="nem_pub" class="key">TODO</span>
-</div><div id="nem_pub_qr" class="qr"></div>
-<div class="desc">
-    TODO:
-    <br><br><span id="nem_pri" class="key">TODO</span>
-</div><div id="nem_pri_qr" class="qr"></div>
-<div class="spacer">
+  <div class="spacer"></div>
+
+  <script type="text/javascript" src="qrcode.js"></script>
+  <script type="text/javascript">
+    var qrTextElements = document.getElementsByClassName("qrText");
+    var qrImageElements = document.getElementsByClassName("qrImage");
+    if (qrTextElements.length != qrImageElements.length) {
+        alert("Unmatched qrText and qrImage elements");
+        throw new Error();
+    }
+    function updateQrImage(qrTextElement, qrImageElement, color) {
+        new QRCode(qrImageElement, {
+            text: qrTextElement.innerText,
+            width: 112,
+            height: 112,
+            colorDark : color,
+            colorLight : "#ffffff",
+            correctLevel : QRCode.CorrectLevel.Q
+        });
+    }
+    for (var i = 0; i < qrTextElements.length; i++) {
+        var qrTextElement = qrTextElements.item(i);
+        var qrImageElement = qrImageElements.item(i);
+        qrTextElement.setAttribute("data-index", i);
+        updateQrImage(qrTextElement, qrImageElement, "LightGrey");
+        qrTextElement.addEventListener("input", function() {
+            var index = this.getAttribute("data-index");
+            var qrImageElement = qrImageElements.item(index);
+            qrImageElement.innerHTML = "";  // delete old qr code
+            updateQrImage(this, qrImageElement, "black");
+            this.style.color = "black";
+        });
+    }
+    f
+  </script>
 
 </body>
-
-
-<script type="text/javascript">
-var keys = document.getElementsByClassName("key");
-for (var i = 0; i < keys.length; i++) {
-    var key = keys.item(i);
-    qr_text = key.innerText;
-    qr_id = key.id + "_qr";
-    addQrCode(qr_id, qr_text);
-}
-
-function addQrCode(qr_id, qr_text) {
-    new QRCode(document.getElementById(qr_id), {
-        text: qr_text,
-        width: 128,
-        height: 128,
-        colorDark : "#000000",
-        colorLight : "#ffffff",
-        correctLevel : QRCode.CorrectLevel.H
-    });
-}
-</script>
-
 </html>
