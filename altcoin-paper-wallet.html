@@ -9,7 +9,7 @@
       margin-bottom: 0px;
     }
     body {
-      font-family: monospace, serif
+      font-family: monospace, serif;
     }
     div.description {
       width: 26%;
@@ -25,7 +25,16 @@
     }
     div.spacer {
       clear: both;
-      padding: 10px 0px 0px 0px;
+      padding: 0px 0px 0px 0px;
+    }
+    div.obscure {
+      width: 215.9mm;
+      height: 297.0mm;
+      background-repeat: repeat;
+      background-image: url("obscure.jpg");
+    }
+    @media print {
+      * {-webkit-print-color-adjust:exact;}
     }
   </style>
 </head>
@@ -34,13 +43,13 @@
   <h3 contenteditable="true">BTC</h3>
   <div class="description">
     <span contenteditable=true>Public Address:</span>
-    <br><br>
+    <br>
     <span class="qrText" contenteditable=true spellcheck=false>1NYA5rWpxF1hNwi2qNH2JoLozC9zXebRYJ</span>
   </div>
   <div class="qrImage"></div>
   <div class="description">
     <span contenteditable=true>Private Key:</span>
-    <br><br>
+    <br>
     <span class="qrText" contenteditable=true spellcheck=false>5KFfQ5VxzQLCk5jUXE3P4VunvCVbdm9h5jT7UvUvDEaXsipUcRC</span>
   </div>
   <div class="qrImage"></div>
@@ -49,7 +58,7 @@
   <h3 contenteditable="true">ETH</h3>
   <div class="description">
     <span contenteditable=true>Public Address:</span>
-    <br><br>
+    <br>
     <span class="qrText" contenteditable=true spellcheck=false>0x5cc2189616cc87cdcbd51eccb58ad9e056b565d2</span>
   </div>
   <div class="qrImage"></div>
@@ -64,13 +73,13 @@
   <h3 contenteditable="true">XRP</h3>
   <div class="description">
     <span contenteditable=true>Public Address:</span>
-    <br><br>
+    <br>
     <span class="qrText" contenteditable=true spellcheck=false>rHHLminn5tvGxvu13ApyQnFt8fpwfEHikS</span>
   </div>
   <div class="qrImage"></div>
   <div class="description">
     <span contenteditable=true>Secret Key:</span>
-    <br><br>
+    <br>
     <span class="qrText" contenteditable=true spellcheck=false>snS25xqx3dfi83E1iGCpsjHA5EMbw</span>
   </div>
   <div class="qrImage"></div>
@@ -79,13 +88,13 @@
   <h3 contenteditable="true">DASH</h3>
   <div class="description">
     <span contenteditable=true>Public Address:</span>
-    <br><br>
+    <br>
     <span class="qrText" contenteditable=true spellcheck=false>Xh9FJd5BMfbtDgJBp9i6zVzSGa8qVbWEHk</span>
   </div>
   <div class="qrImage"></div>
   <div class="description">
     <span contenteditable=true>Private Key:</span>
-    <br><br>
+    <br>
     <span class="qrText" contenteditable=true spellcheck=false>7qqLp4wioK272aRdjPJYmrKNB5i29z9WrNgPKeEfSuYTDwKgrE3</span>
   </div>
   <div class="qrImage"></div>
@@ -94,13 +103,13 @@
   <h3 contenteditable="true">LTC</h3>
   <div class="description">
     <span contenteditable=true>Public Address:</span>
-    <br><br>
+    <br>
     <span class="qrText" contenteditable=true spellcheck=false>LKPvaxjTLh5vsquAKdnzryyLCJxzZ4rmAM</span>
   </div>
   <div class="qrImage"></div>
   <div class="description">
     <span contenteditable=true>Private Key:</span>
-    <br><br>
+    <br>
     <span class="qrText" contenteditable=true spellcheck=false>6uSCCeKkgjLJfo98PPVqHbLpBYg6ef8n9EcWLEYpmrgsTqfPTC9</span>
   </div>
   <div class="qrImage"></div>
@@ -109,13 +118,13 @@
   <h3 contenteditable="true">XMR (Monero)</h3>
   <div class="description">
     <span contenteditable=true>Public Address:</span>
-    <br><br>
+    <br>
     <span class="qrText" contenteditable=true spellcheck=false>45b6BtNh8jC4PguGcoXgxHCW3XfoX85F8RaRDqJ1319oCxc1Wge38rYM1n4m6Mjkzahz2F3gMHcHKc4LqKSTybqo4GvtJan</span>
   </div>
   <div class="qrImage"></div>
   <div class="description">
     <span contenteditable=true>Mnemonic Key:</span>
-    <br><br>
+    <br>
     <span class="qrText" contenteditable=true spellcheck=false>ionic exotic aztec owner yields superior onion rest industrial hyper foamy smidgen foamy</span>
   </div>
   <div class="qrImage"></div>
@@ -124,18 +133,23 @@
   <h3 contenteditable="true">NEM</h3>
   <div class="description">
     <span contenteditable=true>Public Address:</span>
-    <br><br>
+    <br>
     <span class="qrText" contenteditable=true spellcheck=false>NC3QC4MHUK3MA66CGAQE3SGYJI4QVCHJ2EJG4DDV</span>
   </div>
   <div class="qrImage"></div>
   <div class="description">
     <span contenteditable=true>Private Key:</span>
-    <br><br>
+    <br>
     <span class="qrText" contenteditable=true spellcheck=false>5b9e52502640ac7385cf95ae2566431ae072e91e2550212d7fcdffd10a173b1b</span>
   </div>
   <div class="qrImage"></div>
 
   <div class="spacer"></div>
+
+  <p style="page-break-after:always;"></p>
+
+  <div class="obscure"></div>
+
 
   <script type="text/javascript" src="qrcode.js"></script>
   <script type="text/javascript">
